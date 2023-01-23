@@ -46,7 +46,7 @@ inquirer
                 <h5 class="card-title">${response.name}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">${response.location}</h6>
                 <p class="card-text">${response.bio}</p>
-                <<a href="${response.githubUrl}">button type="button" class="btn btn-primary">GitHub</button></a>
+                <a href="${response.githubUrl}"><button type="button" class="btn btn-primary">GitHub</button></a>
                 <a href="${response.linkedinUrl}"><button type="button" class="btn btn-primary">LinkedIn</button></a>
                 </div>
             </div>

@@ -1,3 +1,6 @@
+body {
+  background-color: darkgreen;
+}
 .container {
     width: auto;
     position: absolute;

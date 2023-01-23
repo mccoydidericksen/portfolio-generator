@@ -4,7 +4,6 @@ const fs = require('fs');
 inquirer
   .prompt([
     {
-      type: 'input',
       message: 'What is your name?',
       name: 'name',
     },
@@ -13,20 +12,23 @@ inquirer
       name: 'location',
     },
     {
-      message: 'Short bio of yourself',
+      message: 'Enter a short bio about yourself:',
       name: 'bio',
     },
     {
-        message: 'GitHub user',
+        message: 'What is your favorite programming language?',
+        name: 'language',
+      },
+    {
+        message: 'Enter your GitHub URL:',
         name: 'githubUrl'
     },
     {
-        message: 'LinkedIn name',
+        message: 'Enter your LinkedIn URL:',
         name: 'linkedinUrl',
-    },
+    }
   ])
   .then((response) => {
-    console.log(response)
     const responseStr = `<!DOCTYPE html>
     <html lang="en">
     
@@ -46,6 +48,7 @@ inquirer
                 <h5 class="card-title">${response.name}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">${response.location}</h6>
                 <p class="card-text">${response.bio}</p>
+                <p class="card-text">Favorite programming language: ${response.language}</p>
                 <a href="${response.githubUrl}"><button type="button" class="btn btn-primary">GitHub</button></a>
                 <a href="${response.linkedinUrl}"><button type="button" class="btn btn-primary">LinkedIn</button></a>
                 </div>
